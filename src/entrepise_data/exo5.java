@@ -1,5 +1,4 @@
 package entrepise_data;
-
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
@@ -9,7 +8,8 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 public class exo5 {
-
+//Afficher à l’écran la liste des employés dont le nom est saisi par l’utilisateur
+	
 	final static String URL ="jdbc:postgresql://localhost:5432/postgres";
 	final static String LOGIN = "postgres";
 	final static String PASSWORD = "Amir";
