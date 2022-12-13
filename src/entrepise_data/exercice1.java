@@ -12,6 +12,8 @@ public class exercice1 {
 	final static String LOGIN = "postgres";
 	final static String PASSWORD = "Amir";
 	
+	// Connecter la base de données créée en Java
+	
 	public static Connection log() {
 		Connection connect = null;
 		try {
@@ -21,22 +23,6 @@ public class exercice1 {
 			Statement statement = (Statement) connect.createStatement();
 			
 			//execute statement 
-			ResultSet resultSet = ((java.sql.Statement) statement).executeQuery("select * from emp");
-			{ 
-				while(resultSet.next()) {
-					int noemp = resultSet.getInt("noemp");
-					String nom = resultSet.getString("nom");
-					String prenom = resultSet.getString("prenom");
-					String emploi = resultSet.getString("emploi");
-					int sup = resultSet.getInt("sup");
-					Date embauche = resultSet.getDate("embauche");
-					int sal = resultSet.getInt("sal");
-					int noserv = resultSet.getInt("noserv");
-
-					System.out.println(noemp +" ,"+nom+",  "+prenom+" , "+emploi+" , "+
-					sup+" , "+embauche+" , "+sal+"  "+" , "+noserv);
-				}
-			}
 			
 			connect.close();
 		    }
