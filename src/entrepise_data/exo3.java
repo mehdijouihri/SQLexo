@@ -12,7 +12,9 @@ public class exo3 {
 	final static String URL ="jdbc:postgresql://localhost:5432/postgres";
 	final static String LOGIN = "postgres";
 	final static String PASSWORD = "Amir";
-	public static Connection exo3() {
+	
+	public static Connection exo3()
+	{
 		Connection connect = null;
 		try {
 			connect = DriverManager.getConnection(URL,LOGIN,PASSWORD);

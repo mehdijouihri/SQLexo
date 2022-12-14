@@ -1,3 +1,4 @@
+
 package entrepise_data;
 import java.sql.Connection;
 import java.sql.Date;
@@ -35,8 +36,8 @@ public class Entreprise_Connect {
 					int sal = resultSet.getInt("sal");
 					int noserv = resultSet.getInt("noserv");
 
-					System.out.println(noemp +" ,"+nom+",  "+prenom+" , "+emploi+" , "+
-					sup+" , "+embauche+" , "+sal+"  "+" , "+noserv);
+					//System.out.println(noemp +" ,"+nom+",  "+prenom+" , "+emploi+" , "+
+					//sup+" , "+embauche+" , "+sal+"  "+" , "+noserv);
 				}
 			}
 			
@@ -50,6 +51,45 @@ public class Entreprise_Connect {
 		return connect;
 	}
 
+// afficher la liste des employe 
+	
+	
+public static Connection exo2() {
+	Connection connect = null;
+	try {
+		connect = DriverManager.getConnection(URL,LOGIN,PASSWORD);
+		// creat statement 
+		
+		Statement statement = connect.createStatement();
+		
+		//execute statement 
+		ResultSet resultSet = statement.executeQuery("select * from emp ");
+		{ 
+			while(resultSet.next()) {
+				int noemp = resultSet.getInt("noemp");
+				String nom = resultSet.getString("nom");
+				String prenom = resultSet.getString("prenom");
+				String emploi = resultSet.getString("emploi");
+				int sup = resultSet.getInt("sup");
+				Date embauche = resultSet.getDate("embauche");
+				int sal = resultSet.getInt("sal");
+				int noserv = resultSet.getInt("noserv");
+
+				System.out.println(noemp +" ,"+nom+",  "+prenom+" , "+emploi+" , "+
+				sup+" , "+embauche+" , "+sal+"  "+" , "+noserv);
+			}
+		}
+		
+		connect.close();
+	    }
+	
+	catch (SQLException e) {
+		System.out.println("Connection Failed try again.....");
+		e.printStackTrace();
+	} 
+	return connect;
+}
+	
 	
 // Afficher à l’écran la liste des employés du service 5
 	

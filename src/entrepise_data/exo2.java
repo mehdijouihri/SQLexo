@@ -7,7 +7,6 @@ import java.sql.Statement;
 import java.util.Scanner;
 import java.sql.SQLException;
 
-
 public class exo2 {
 
 	final static String URL ="jdbc:postgresql://localhost:5432/postgres";
