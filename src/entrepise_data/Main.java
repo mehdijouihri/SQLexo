@@ -20,44 +20,52 @@ class Main {
 			case  2:
 				
 			System.out.println(" ");		
-			System.out.println("Exercice 2:----------------------------------------");
+			System.out.println("----------------------------------------");
 			Entreprise_Connect.exo2();
 			break;	
 			
 			case 3:
 				
-			System.out.println("Exercice 3:----------------------------------------");
+			System.out.println("----------------------------------------");
 			System.out.println(" ");
 			Entreprise_Connect.exo3();
 			System.out.println(" ");
 		    break;
 				
 			case 4:		
-			System.out.println("Exercice 4:----------------------------------------");
+			System.out.println("----------------------------------------");
 			System.out.println(" ");
 			Entreprise_Connect.exo4();
 			System.out.println(" ");
 			break;
 			
 			case 5:
-			System.out.println("Exercice 5:----------------------------------------");
+			System.out.println("----------------------------------------");
 			System.out.println(" ");
 			Entreprise_Connect.exo5();
 			break;
 			
 			case 6:
 			System.out.println(" ");
-			System.out.println("Exercice 6:----------------------------------------");
+			System.out.println("----------------------------------------");
 			System.out.println(" ");
 			Entreprise_Connect.exo6();
 			break;
 			
 			case 7:
 			System.out.println(" ");
-			System.out.println("Exercice 7:----------------------------------------");
+			System.out.println("----------------------------------------");
 			System.out.println(" ");
 			Entreprise_Connect.exo7();
 			break;
+			
+			case 8:
+				System.out.println(" ");
+				System.out.println("----------------------------------------");
+				System.out.println(" ");
+				Entreprise_Connect.exo8();
+				break;
+			
 			}
 			connect.close();
 		} catch (SQLException e) {
